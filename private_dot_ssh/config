@@ -1,0 +1,7 @@
+Host multilab
+  HostName rose.cs.uky.edu
+  User jtho264
+Host danceblue-server
+  HostName ssh.danceblue.org
+  User appdev
+  ProxyCommand /usr/bin/cloudflared access ssh --hostname %h
