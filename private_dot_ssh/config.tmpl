@@ -1,0 +1,29 @@
+# UKY
+Host multilab
+  HostName rose.cs.uky.edu
+  User jtho264
+
+# DanceBlue
+Host danceblue-server-cf
+  HostName ssh.danceblue.org
+  User appdev
+  ProxyCommand /usr/bin/cloudflared access ssh --hostname %h
+
+# Personal
+{{ if lookPath "tailscale" }}
+Host aurora-desktop-ts
+  HostName 100.82.100.53
+  User tagho
+
+Host alder-desktop-ts
+  HostName 100.95.236.81
+  User tagho
+
+Host xps-laptop-ts
+  HostName 100.100.177.24
+  User tagho
+
+Host aleph-server-ts
+  HostName 100.101.60.74
+  User root
+{{ end }}
